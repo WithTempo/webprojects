@@ -1,0 +1,25 @@
+body {
+    background-color: rgb(241, 241, 216);
+    color: rgb(35, 35, 77);
+    
+}
+#side-menu {
+    position: fixed;
+    /*height: 200%;*/
+    height:100%;
+    width: 80px;
+    border: 2px solid rgb(47, 41, 59);
+    margin: -8px;
+    padding-top:35%;
+    text-align: center;
+    background-color:rgb(241, 241, 216);
+    float: left;
+}
+
+.name {
+    text-align: center;
+    font-size: 48px;
+    margin-left:48px;
+    font-family: Inter, sans-serif;
+    
+}

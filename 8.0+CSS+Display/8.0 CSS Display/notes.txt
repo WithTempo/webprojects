@@ -1,0 +1,38 @@
+Display elements:
+Span - has a default display element set to inline
+
+ex: <h2>Harry</h2>
+    <h2>Potter </h2>
+
+    default:
+
+        h2 {
+            display: inline;
+        }
+
+    display set to inline by default
+
+
+BLOCK, INLINE, INLINE-BLOCK
+
+Block will take out the entire full width
+if you have another element, then it will appear below it and not on the same line.
+
+if you have two elements and the display is inline, 2 spans will go on the same line until it will no longer fit and then go to the next line.
+
+you can't set the width/size of these elements, they will always default.
+
+inline-block: halfway between. the block element allows us to set height and width, the inline lets us have elements that go ont he same line. 
+
+if you had two blocks, one 200x200 and one 20x100, with inline block, they will go on the same horizontal line as long as there is space
+
+display:non -> element will disappear from the screen. 
+
+
+
+so block takes up the whole horizontal width until the next line
+
+inline will fit as much as it can before overflowing to the next line.
+however, the height and width will only be as large as the content of th element
+
+inline-block will fit everything on the same line, but gives you control over the size of the element.

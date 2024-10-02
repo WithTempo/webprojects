@@ -1,0 +1,26 @@
+If we want our text to wrap around an element,
+ this requires us to use the float property.
+
+    <img.../>
+    <p>text...</p>
+
+    img {
+        float:left;
+    }
+
+    this will make the text wrap around the image > no setings on the text, only the float: left property on the image element
+
+    float right will do the same except the image would be on the right and the text on the left
+
+    sometimes you don't want your text to wrap around an image, such as is the case when you have a footer. In this case you need
+    to use another property called 'clear'
+
+    target footer:
+
+    footer {
+        clear:left;
+    }
+
+    definitely don't use float for overly complex layouts because it will end up looking
+    all janky, instead just use it for text wrap and there are other tools you will
+    use later in order to make complex layouts

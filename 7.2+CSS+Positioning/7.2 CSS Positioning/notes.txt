@@ -1,0 +1,60 @@
+4 different values for position property:
+STATIC, RELATIVE, ABSOLUTE, FIXED
+
+STATIC: html default, basically means that each item flows 
+    as they would in html.
+    EX:
+        box {
+            position: static;
+        }
+
+RELATIVE: Item is placed relative to default location,
+    use top, right, bottom, and/or left to apply the position change relative 
+    from the default location. for example:
+
+    box {
+        position: relative;
+        left; 50px;
+        top; 50px;
+    }
+
+    will shift the box from it's default location 50px down
+    and 50px to the right.
+
+ABSOLUTE: position relative to the nearest positioned ancestor
+    or the top left corner of the webpage (the html block).
+    An absolutely positioned element is removed from the normal
+    document flow meaning it does not affect the position of 
+    other elements and can actually overlap them.
+
+        Ex:
+            box {
+                position: absolute;
+                top: 100px;
+                right: 100px;
+            }
+        
+        will psoition the box 100 pixels down and left from
+        it's nearest ancestor
+
+    Z-index, absolute psitioning lets you set a z-axis property
+    which determines which elements sit on top or beneath
+    other elements. 
+
+            box {
+                z-index: 0;
+            }
+
+        this positions the box as the absolute top
+
+FIXED:
+    WILL BE POSITIONED RELATIVE TO THE TOP LET CORNER OF THE 
+    THE BROWSER WINDOW, BUT WILL STAY WHERE IT IS REGARDLESS
+    OF WHERE YOU SCROLL. 'THINK SIDE MENUS'
+
+        EX:
+            box {
+                position: fixed;
+                left: 50px;
+                top: 50px;
+            }
