@@ -1,0 +1,71 @@
+Responsive webistes (adjusting screen)
+
+Meida Queries, css grid, css flexbox, external frameworks (i.e. bootstrap)
+
+1 @media (max-width: 600px) {
+    /* CSS for screens below or equal to 600px wide */
+}
+
+2 CSS grid
+harder but more flexible - first create a div with multiple divs inside, these are going to be your cards.
+
+<div class="grid-container">
+    <div class="first card"></div>
+    <div class="card"></div>
+    <div class="card"></div>
+    <div class="card"></div>
+    <div class="card"></div>
+</div>
+
+next you're going to create the css:
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; <-2 columns, each are 1 fraction, equal fraction, screen divided into two columns
+    grid-template-rows: 100px 200px 200px; <-- top row 100px, next row 200px, next row 200px
+    gap: 30px;<--distance between each of the rows and columns
+}
+
+.first {
+    grid-column: span2; <- spans 2 columns of the grid, so the first is a single bar
+}
+
+.card {
+    background-color: blue;
+}
+
+3 CSS flexbox - create boxes on the horizontal or vertical, div containers contains your boxes, 
+
+<div class="flex-container">
+    <div class="first card"></div>
+    <div class="second card"></div>
+    <div class="card"></div>
+    <div class="card"></div>
+</div>
+
+
+.flex-container {
+    display: flex
+}
+
+.card {
+    background: blue;
+    border: 30px solid white; 
+    height: 100px;
+    flex: 1; <- each of these cards has an equal width diffusion
+}
+
+.first {
+    flex:2; <-this means it's going to be twice the width of the unmodified divs
+}
+
+.second {
+    flex: .5; <- this should have half the width of the normal divs
+}
+
+everything is a ratio and that means it is by default Responsive
+
+4. Bootstrap framework: it's external and not built in.
+    defined a bunch of classes, and put different rules 
+    12 division system
+    <div class="card col-6"> will take up 6 of the 12 
