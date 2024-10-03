@@ -1,0 +1,41 @@
+media query
+
+div {
+        backgrond-color: blue;
+        height: 200px;
+        width: 200px;
+}
+/* target small screens
+@media (max-width: 600px) {
+    div {
+        height: 100px;
+        width: 100px;
+    }
+}
+
+/*target large screens
+@media (min_width: 600px) {
+    h1 {
+        font-size: 15px;
+    }
+}
+
+in-between
+@media (min-width: 600px) and (max-width: 900px) {
+    /*styles for screens between 600px and 900px */
+}
+
+max-width : the maximum width where this style will be applied
+
+default
+@media screen(orientation: landscape) {
+    /*styles for landscape orientation */
+}
+
+specifically when being printed
+@media Print(orientation: landscape) {
+    /*styles for landscape orientation*/
+}
+
+developer.mozilla.org will show you a bunch of different things you can target with mediaqueries.
+most of the time you will be using pretty simple max-width  min-width
