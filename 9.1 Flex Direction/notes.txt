@@ -1,0 +1,19 @@
+FLEX-DIRECTION
+
+normally in html, elements will stack horizontally and overflow onto the next line, top to bottom.
+
+with flexbox, as soon as everythign goes in a flexible container go on the same row
+the reason for this is there is a property called flex direction, which by default is set to row.
+
+cross-axis is perpendicutlar to the horizontal axis
+
+flex-direction: column;
+then it will make each element inside the flex container go from top to bottom
+
+flex-basis: 100px;
+this is going to expand the elements vertically along the main axis to 100px each;
+if instead of having the main axis vertical, we have flex-direction set to row and the main axis is horizontal,
+now when we set the flex-basis, isntead of height, it will set the width of each of the items inside the container
+to satisfy the requirement. 
+
+the property modifiers are 'flexing' along the main axis. that why the main and cross axis matter so much.

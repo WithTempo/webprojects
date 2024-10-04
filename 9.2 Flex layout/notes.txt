@@ -1,0 +1,63 @@
+properties - 
+a big question is whethere a property will be applied to the
+parent or to the child
+
+order - the order of your childs items
+by default, everything has an order of 0, so
+they'll be arranged by the order of their html,
+if you wanted to change that, you could set the order.
+
+.green {
+    order: 1
+}
+
+this will send it to the end as it has an order
+higher than the rest
+
+flex-wrap
+useful when you run out of space on the horizontal
+
+normally, if there are too many itmes or some of the items are longer,
+then it will just continue pushing and collapsing until they can't be collapsed
+anymore where they will go off the end of the page.
+
+change: 
+
+    flex-wrap: wrap
+
+content and elements will wrap around on the next line.
+
+flex-wrap is a property of the parent, the container, and
+determines how all the children should behave.
+
+
+justify-content: flex-start; everything bunched up to the left (default)
+                 flex-end will push everything to the right.
+
+if all the items have arleady taken up all the space, then it wont' behave the same
+
+justify-content: center; will just put it in the center, very easy. 
+justify-content: space-between; evenly distributes the space between the elements
+justify-content: space-around kind of similar but theres space to the left and right 
+                of the first and last elements respectively wherease space between
+                will ensure the first and last elements are at the very beginning and end
+
+align-items: flex-start
+this is the position of the item along the cross-axis, set on the container
+if the container is only taking up one row, then we won't see anything,
+for this to work we have to set the height of the container
+we set to 
+
+70vh where vh is viewport height.
+100 is the entire height
+
+vw = viewport width
+
+align-items: flex-end -> everything starts at the bottom
+align-items: center;
+
+align-self: property set on child elements, allows that item to act
+independently
+
+align-content is similar to align item but only works when flex-wrap is set to wrap
+you want to specify how the content should align.

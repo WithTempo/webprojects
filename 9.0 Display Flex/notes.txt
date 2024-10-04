@@ -1,0 +1,39 @@
+FLEXBOX
+- Originally people used Tables to make website layout
+- Table should only be used when semantically you're actually trying to create tables
+- But you shouldn't be using tables to layout the styling of your website in modern web design
+- There are much better tools to do this nowadays
+
+- People started using the 'display' property
+- Ex: 3 divs with inline block to show up on the same line and configuring the width so they'd be stacked up
+    next to each other on the same column, but this lead to inconsistencies in height
+-example, using position:absolute; setting how far from the left, etc.. but as soon as you add something elements
+    it'll mess up the whole layout again and is a pain in the butt.
+
+- One of the most relied on tools 2005-2010:
+    Float - very useful for floating images to get the text to wrap around.
+    3 divs all floating left/right so they would stack up on each other.
+    using float and clear for complex layouts.
+    -but again, it's not that simple to mess around with, it's really hard to fix
+    -don't use floats except for floating images and wrap the text around it
+    -DON'T USE FLOAT FOR layouts
+
+Flexbox, Grid, Bootstrap - created specifically for layout structure
+
+with flexbox all you need to do is to wrap your elements in a single container
+-then set the container to display: flex; really easy
+
+when we declare something display: flex, we give a little bit of control for it to layout our content in a reasonable way
+but we have all these tools to tweak it to exactly the way we want.
+
+div -> default block
+span -> default inline
+
+when wrapping in a flexbox, all the previous display values will be ignored, and the width of each element will normally be
+based on the size of the content inside the element. 
+
+we can use 'gap' in order to add a gap say gap:10px, or if you want responsive, gap: 1rem; (will adapt based on the top level size of your content)
+
+by default, display: flex will create a container that will be like a block element, but you can also set display: inline:flex;
+similar to the inline-block, it allows the flexbox to occupy as much space as it needs, but other things can also occupy that same line
+

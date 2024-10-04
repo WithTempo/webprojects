@@ -1,0 +1,85 @@
+imagine a webpage with 4 paragraph elements
+they're all going to be full width (they're block by default)
+
+if we put all the paragraphs into a flex container, it's going to put them in a single row
+
+at this stage, it has a default behavior
+if we change the width of the container, then the blocks will shrink in response
+
+sometimes you'll need to customize this
+in order to customize this you'll have to understand the algorithms the flexbox uses to determine the items size
+
+uses a priority list
+first looks at min/max width
+then is there a flex basis set? (set the width/height of a row/column based flexbox respectively)
+then it will look at the width/height property of the element
+and finally the actual content width
+
+if the box has to shrink it will go down to the minimum size where the text is stacked on top of itself (2 words)
+the minimum width is the width of the longest word
+
+afterwards the content will be pushed off the page and not be visible on the screen anymore
+
+if we manually set the width of each of the items, the boxes will try to respect that width until there is not 
+enough room, afterwhich, the flex will attempt to shrink the boxes again (longest word)
+
+when there is a lot of space, it will respect the width (instead of expanding horizontally)
+
+flex-basis: 200px;
+width: 100px;
+
+this will ignore the width because the flex-basis is set, and it's going to set each box to the width of the flex basis.
+there will still be space left
+if you shrink everything down then it will revert to that minimum width (not the width property) behavior described previously.
+
+and now min/max width:
+the default min/max width
+max - all of the content lined up on a single line
+min - determined by the longest word and it's the width of that word
+you can manually set each of these properties and ignore the content
+
+example: flex-basis: 200px; max-width: 100px;
+instead of respecting flex-basis, it's going to look at max-width and only give each element 100px;
+if the max width is smaller than the flex basis it will take the max-width value,
+if the flex-basis is smaller, then it will respect the flex-basis instead
+
+flex-basis: 200px;
+min-width: 300px;
+respecting the minimum width - when the min width is larger than the flex-basis, when we try to shrink our container down,
+it will only shrink until the minimum width is reached (before the items start disappearing off the screen)
+
+the flexibility comes from the flexbox's ability to grow and shrink.
+
+flex-grow: 0
+flex-shrink: 0
+flex-basis: 100px;
+
+trying to grow and shrink the window will not affect the size of the items
+flex-grow -> 1
+
+each of the items will first start out at 100px, (flex-basis: initial starting value)
+it will then grow as you widen the window until the entire width of the container is filled.
+then when you shrink, it will shrink the boxes back to that 100px set in flex-basis.
+
+now if we turn off flex-grow and turn on flex-shrink, it will by default be 100px, it will not grow to fill the space
+but it will shrink until you reach the minimum width.
+
+flex-grow and flex-shrink both on -> boxes will expand/contract to their max/min widths so the flex-basis is actually ignored.
+
+the default for flex-basis is 'auto'
+flex-basis: auto <- will look at the content and give more width to items with more content and less width to items with less width,
+to switch this off:
+
+flex-basis: 0
+
+
+there's a shorthand way to do this
+
+flex: grow shrink basis
+flex: 1 1 0
+
+because this is so commonly used, you can write:
+flex: 1; <- this means grow=1 shrink=1 and basis=0
+
+
+
