@@ -9,20 +9,23 @@
       rel="stylesheet"
     />
     <style>
-      body {
+      /* Hint: What can you do with a media query and flexbox? */
+      @media (min-width: 1251px) {
+        body {
         font-family: "Sono", sans-serif;
         height: 100vh;
         width: 100vw;
         justify-content: center;
         align-content: center;
-      }
-      .pricing-container {
+        }
+        .pricing-container {
         display: flex;
         align-content:center;
         justify-content: center;
         gap: 50px;
-      }
-      .pricing-plan {
+        flex-direction: row;
+        }
+        .pricing-plan {
         flex: 1;
         max-width: 440px;
         display: flex;
@@ -35,35 +38,83 @@
         justify-content: space-evenly;
         padding-top: 20px;
         padding-bottom: 20px;
-      }
-        
-      .plan-title {
+        }
+        .plan-title {
         font-weight: 700;
         font-size: 25px;
         flex: 1;
-      }
-
-      .plan-price {
-        font-weight: 700;
-        font-size: 50px;
-        flex: 1;
-      }
-
-      .plan-storage, .plan-users, .plan-support {
-        flex: 1;
-      }
-
-      .plan-button {
-        flex: 1;
-        background-color: orange;
-        color: white;
-        border-radius: 5px;
-        border-color: orange;
-      }
-
-      /* Hint: What can you do with a media query and flexbox? */
+        }
+        .plan-price {
+          font-weight: 700;
+          font-size: 50px;
+          flex: 1;
+        }
+        .plan-storage, .plan-users, .plan-support {
+          flex: 1;
+        }
+        .plan-button {
+          flex: 1;
+          background-color: orange;
+          color: white;
+          border-radius: 5px;
+          border-color: orange;
+        }
+        
+    }
       @media (max-width: 1250px) {
-      }
+        body{
+          font-family: "Sono", sans-serif;
+          height: 100vh;
+          width: 100vw;
+          display:flex;
+          align-items: center;
+          flex-direction: column;
+        }
+        .pricing-container{
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 40px;
+          padding-bottom: 40px;
+          width: 450px;
+        }
+
+        .pricing-plan {
+          flex: 1;
+        max-width: 400px;
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(244, 244, 243);
+        border-radius: 2%;
+        align-items: center;
+        max-height: 270px;
+        min-height: 270px;
+        justify-content: space-evenly;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        }
+        .plan-title {
+        font-weight: 700;
+        font-size: 25px;
+        flex: 1;
+        }
+        .plan-price {
+          font-weight: 700;
+          font-size: 50px;
+          flex: 1;
+        }
+        .plan-storage, .plan-users, .plan-support {
+          flex: 1;
+        }
+        .plan-button {
+          flex: 1;
+          background-color: orange;
+          color: white;
+          border-radius: 5px;
+          border-color: orange;
+        }
+    }
     </style>
   </head>
 
@@ -82,21 +133,17 @@
       <div class="pricing-plan">
         <div class="plan-title">Standard</div>
         <div class="plan-price">$19.99/month</div>
-        <ul class="plan-features">
-          <li>✅ 50GB Storage</li>
-          <li>✅ 5 Users</li>
-          <li>✅ Phone &amp; Email Support</li>
-        </ul>
+          <div class="plan-storage">✅ 50GB Storage</div>
+          <div class="plan-users">✅ 5 Users</div>
+          <div class="plan-support">✅ Phone &amp; Email Support</div>
         <button class="plan-button">Sign Up</button>
       </div>
       <div class="pricing-plan">
         <div class="plan-title">Premium</div>
         <div class="plan-price">$49.99/month</div>
-        <ul class="plan-features">
-          <li>✅ 100GB Storage</li>
-          <li>✅ 10 Users</li>
-          <li>✅ 24/7 Support</li>
-        </ul>
+          <div class="plan-storage">✅ 100GB Storage</div>
+          <div class="plan-users">✅ 10 Users</div>
+          <div class="plan-support">✅ 24/7 Support</div>
         <button class="plan-button">Sign Up</button>
       </div>
     </div>
