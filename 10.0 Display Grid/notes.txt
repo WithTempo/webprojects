@@ -1,0 +1,187 @@
+how to size our columsn and rows:
+
+<div class="grid-container">
+    <div class="grid-item">1</div>
+    <div class="grid-item">2</div>
+    <div class="grid-item">3</div>
+    <div class="grid-item">4</div>
+</div>
+
+.grid-container {
+    display: grid;
+    grid-template-rows: 100px 200px;
+    grid-template-columns: 400px 800px
+}
+
+it will look something like this:
+
+<---400px--------><---------------800px------------------>
+----------------------------------------------------------^
+|                 |                                      |100px
+|_________________|______________________________________|V
+|                 |                                      |^
+|                 |                                      |200px
+|_________________|______________________________________|V
+
+this grid is not responsive.
+
+if you change the width or height of the window, 
+the grid will stay the same, now if you use rem,
+it will stay the same as well because it is not 
+responsive to the screen size.
+
+instead of having grid-template-rows/grid-template-columns,
+use this:
+
+grid-template: 100px 200px / 400px 800px;
+
+^don't use this just yet as we're still learning but it's
+important to know so in case you see it
+
+'auto' keyword
+
+grid-template-rows: 100px auto;
+grid-template-column: 200px auto;
+
+width: each grid will try to take up 100% of the space
+and will size with the window.
+
+height: it doesn't try to take up 100% of the screen's height,
+it simply tries to fit to the content.
+
+appbrewery.github.io/grd-sizing
+
+fractional sizing:
+
+frequently instead of having a set size you will want to 
+use ratios for sizing your grid so that the webpage stays
+responsive. maybe you want the first row to be half the size
+of the second row, this is where 'fr' comes in
+
+<div class="grid-container">
+    <div class="grid-item">1</div>
+    <div class="grid-item">2</div>
+    <div class="grid-item">3</div>
+    <div class="grid-item">4</div>
+</div>
+
+.grid-container {
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    grid-template-columns: 1fr 2fr;
+}
+
+the grid box will adjust it's size to try and always match
+the ratio.
+
+sometimes you want to define how your grid is responsive,
+especially on the horizontal
+
+<div class="grid-container">
+    <div class="grid-item">1</div>
+    <div class="grid-item">2</div>
+    <div class="grid-item">3</div>
+    <div class="grid-item">4</div>
+</div>
+
+.grid-container {
+    display: grid;
+    grid-template-rows: 200px 400px;
+    grid-temlate-columns: 200px minmax(400px,600px)
+}
+
+here with minmax we can define the minimum,maximum width
+
+remember previously we had to write for our chess board:
+
+    1fr 1fr 1fr 1fr..
+
+instead we can use 'repeat' to save time:
+
+<div class="grid-container">
+    <div class="grid-item">1</div>
+    <div class="grid-item">2</div>
+    <div class="grid-item">3</div>
+    <div class="grid-item">4</div>
+</div>
+
+.grid-container {
+    display: grid;
+    grid-template-rows: repeat(2, 200px);
+    grid-template-columns: repeat(2, 100px);
+}
+
+this will repeat twice in the rows and columns
+what if you define a grid that is larger than you have items for?
+
+<div class="grid-container">
+    <div class="grid-item">1</div>
+    <div class="grid-item">2</div>
+    <div class="grid-item">3</div>
+    <div class="grid-item">4</div>
+</div>
+
+.grid-container {
+    display: grid;
+    grid-template-rows: repeat(2, 200px);
+    grid-template-rows: repeat(3, 100px);
+}
+
+it will repeat and leave that space empty:
+it will look like this:
+
+
+    ______________________________________
+    |            |            |          |
+    |            |            |          |
+    |            |            |          |
+    |            |            |          |
+    |            |            |          |
+    |            |            |          |
+    |____________|____________|__________|
+    |            |
+    |            |
+    |            |
+    |            |
+    |            |
+    |            |
+    |____________|
+
+
+what if you dont' define enough rows and columns?
+
+<div class="grid-container">
+    <div class="grid-item">1</div>
+    <div class="grid-item">2</div>
+    <div class="grid-item">3</div>
+    <div class="grid-item">4</div>
+    <div class="grid-item">5</div>
+</div>
+
+.grid-container {
+    display: grid;
+    grid-template-rows: 200px, 200px;
+    grid-template-columns: 200px, 200px;
+}
+
+in this case we define a 2x2, then anything that gets added afterward
+will get automatic sizing based on it's hieght. (height of content)
+
+if you want to add more rows in the future you can use:
+
+grid-auto-rows
+grid-auto-columns
+
+<div class="grid-container">
+    <div class="grid-item">1</div>
+    <div class="grid-item">2</div>
+    <div class="grid-item">3</div>
+    <div class="grid-item">4</div>
+</div>
+
+.grid-container {
+    grid-template-rows: 200px, 200px;
+    grid-template-columns: 200px, 200px;
+    grid-auto-rows: 300px;
+    grid-auto-columns: 300px;
+}
