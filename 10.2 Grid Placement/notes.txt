@@ -1,0 +1,99 @@
+how to layout items in a grid:
+
+first create a container, the grid container
+
+the items placed inside the grid are called grid items
+we create rows and columns
+we have row tracks
+and column tracks
+within the intersection of the tracks are the 'grid cell'
+
+you can use multiple cells to create a grid item
+
+finally we have 'grid lines' which sit between the grid tracks
+
+so we have
+grid, lines, tracks, cells, containers, items
+all of these things combined together allows us to create our layout
+
+<div class=container">
+    <div class="item cowboy">C</div>
+    <div class="item astronaut">A</div>
+    <div class="item book">B</div>
+</div>
+
+.container {
+    height: 100vh;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr 1.5fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+div by default will fill out the entire lines
+but is only going to be as wide as their is content
+by setting height to 100vh it's also going to take that div and 
+stretch it down to the bottom of the windows;
+
+now the items get placed in by default, it will start in the first and...
+this is before we specify any positionsing
+also we've set 3 rem gap which means each line should be 3rem thick
+
+you can use flex inside your grid items to center objects
+
+Grid-column: span 2; <-this will make your grid object extend to the end 
+of the second box.
+
+grid-column is actually shorthand for 2 properties:
+
+    grid-column-start
+    grid-column-end
+
+    you can use negative values with these as well
+
+there is a corresponding property called grid-row so you can set
+the vertical space the item takes up.
+
+grid items also take order:
+
+{
+    order: 0;
+}
+
+which lets you select their placement in the grid.
+if we elevate or promote the order of 1 item from
+
+            0 -> 1
+
+that item will be moved to the end of the grid.
+the direction goes from left to right and then
+top to bottom.
+
+also:
+
+to simplify things here is grid area:
+
+.astronaut {
+    grid-area: 2/1/3/3
+}
+
+grid-area takes four values, in order:
+
+    grid-row-start
+    grid-column-start
+    grid-row-end
+    grid-column-end
+
+grid lets you overlay items onto other items
+
+.cowboy {
+    grid-area: 1/1/2/3;
+}
+
+.astronaut {
+    grid-area: 2/1/3/3;
+}
+
+.book {
+    grid-area: 1/2/3/4;
+}

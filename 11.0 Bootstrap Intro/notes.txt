@@ -1,0 +1,30 @@
+bootstrap
+
+css framework that contains predefined css styles
+easy to create responsive websites
+mobile first
+
+by simply including css classes in our html/css we don't have to worry about writing the css code;
+
+pre-made ss files 
+completely open source
+all code visible
+
+downsides- class bloat
+
+html -> structure
+css -> styling
+
+customization
+
+when we are building a mobile first website, -> easy -> slick -> beautiful -> bootstrap
+custom webiste -> don't use css frameworks like bootstrap
+include via corresponding
+
+
+<link href="https://cdn.jsdeliver.net/;jl/boostrap.3-o-alpha....">
+
+inlcude this link in the head and you can use bootstrap
+then the 
+
+<script bootstrap>

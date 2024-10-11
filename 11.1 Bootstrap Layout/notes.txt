@@ -1,0 +1,58 @@
+12 column layout system
+
+3 components 
+
+first a div clasa container
+
+inside container another div which will be of class row
+and inside that will be our dolumn system
+<div class="container">
+    <div class=" row">
+        <div class="col">Hello</div>
+    </div>
+</div>
+
+automatically bootstrap will give every column equal space
+
+container is responsive
+
+container sizes depending on screens
+extra small, small, medium,large, x-large, xxlarge
+
+width of viewport
+.container 100%
+.container-sm 540px
+.container-md 720px
+.container-lg 960px
+.container-xl 1140px
+.container-xxl 1320px
+.container-fluid -> will change depending on screen size?
+
+instead of writing column, we set the calss as col-2, col-4, 
+
+how to specify how wide the clumns are? based on the classes you choose.
+
+col-1 will be teh smallest, col-12 will be the largest, they have to add up to 12.
+
+looks like this:
+
+<div class="container">
+    <div class="row">
+        <div class="col-2">Hello</div>
+        <div class="col-4">Hello</div>
+        <div class="col-6">Hello</div>
+    </div>
+</div>
+
+didn't even have to write any css, just include the link in the html <head> 
+
+don't need media queries, becasue bootstrap breakpoints take care of this
+multiple breakpoints
+
+class="col-sm-12 col-md-8 col-lg-4"
+
+this means on small devices like phones, the div will take up 12 columns or the whole screen,
+whilst on medium devices such as ipads or tablet, it will take up 2/3rds of the screen,
+and on large devices such as laptops or desktop monitors, it will take up 1/3 or the screen.
+
+you can mix and match
