@@ -8,15 +8,10 @@
   display: flex;
   
 }
-#testimonial-companies > div {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-
-}
 #testimonial-companies > div > img {
   height: 30px;
 }
+
 @keyframes gradient-animation {
   0% {
     background-position: 0% 50%;
