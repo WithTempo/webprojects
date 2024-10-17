@@ -1,0 +1,99 @@
+Color theory - creating the right palette
+moof predominant colors convey something
+
+red - entergetic
+yellow - joy, intellect, attention - impossible to not look at tsomething that is yellow
+green - freshness, growth, safety
+blue - stabiity, trust, serentity (financial companies)
+purple - royalty, wealth, femininity (payday loan companies)
+
+make a conscious decision when choosing a colors
+combinging colors:
+analogous color pallette, colors next to each other on color wheels (navigation or logo and background)
+
+oppositie colors are complementary on color wheel, clash and 'pop' - use for maybe logos or icons or things you want
+to stand out.
+don't use for regular text and background, they'll make your eyes hurt
+
+drawing an equilateral triangle on the color wheel -
+creats a triadic color palette
+adobe color will create color palettes for you
+colorhunt.co is anothe rwebsite that comes up with the color combos for you.
+
+TYPOGRAPHY
+
+consider how to combine different fonts to make your design look professional
+serif vs non serif
+serif - has feet - historically, you'll notice these little feet, why? once you chisel needs to exit, it's impossible to create 90 degree angles so you had to do it like this
+older, authoritative, legal, magazine, architectural
+
+old style, traiditional, odern, slab-style. - the difference is the thickest vs thinnest part of the letter
+authoritative and modern - or old style for winery etc.
+
+serif - tradiitional stable, respectful, authortitative - cogue - serif typeface
+
+sans-serifs - perfect right-angles, no little feet. much more friently, contemporary and approachable. 
+highly readable, sans-serifs for bodies of texts. 
+
+how easy the words are to readable
+mit study - humanist stypeface
+readability and legibility are open shapes and a lot of space, unambiguious g vs 9, wide O, 
+people go overboard and choose 10 fonts in the same design
+actually just stick with 2 -cleaner and tighter
+
+try to go for similar moods and time eras, you don't want traditional and modern
+create intereset by changing different font-weights in head and body
+
+Manage Attention with interactive user interface
+
+User Interface design
+define hierarchy using color (already discussed)
+size - bigger items draw your eyes
+
+optimal line length  - 40 to 60 characters per line
+
+alignment - consistency - reduce number of alignment points or lines, it makes it look more coherent and proefessional
+
+luxury shops use white space around products and space them out to make them look more expensive, too many items looks like a discount store
+
+same with ui - minimilast and eleveation
+
+audience - consider your audience
+
+
+user experience -
+meant to be invisible, how a website feels to use (effortless)
+
+simplicity, keep things simple
+consistency
+reading-patterns
+
+F-pattern - using heat maps to track user engagement, people read in an 'F-pattern' that is they start at the beginning of the line
+and move to the right,
+put the most important parts of your content on the left gutter, have the logo at the top and have everything following this pattern
+
+Z-pattern - left to right then zig zag down to the bototm left and across to the bottom right
+-something with sparse content, a big video, maybe facebook website
+
+all platform design - you have to think about mobile, desktop, tablets, everything responsive
+make sure your website re-arranges itself baed on the dimensions of the device which is viewing the website
+
+avoid too many banners -
+but don't make your entire website just one part a picture or a piece of text scaled up massively
+then people have to just keep scrolling forever
+
+
+test-test-testget feedback from users, family, friends 
+
+don't use your powers for evil - 
+patterns which get the usre to perform behaviors that are good for a complementary
+tricking people into paying more
+hair on the screen
+ryan-air, charges you for every single thing
+checkboxes with confusing wording
+
+web design together
+daily ui
+collect ui
+applying four pillars
+canva - quickly throw together and visualize a website ( no functionality)

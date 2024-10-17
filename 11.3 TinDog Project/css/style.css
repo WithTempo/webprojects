@@ -4,11 +4,11 @@
   animation: gradient-animation 18s ease infinite;
 }
 
-#testimonial-companies {
+#testimonial-companies > div {
   display: flex;
-  
+  justify-content: center;
 }
-#testimonial-companies > div > img {
+#testimonial-companies > div > div > img {
   height: 30px;
 }
 
