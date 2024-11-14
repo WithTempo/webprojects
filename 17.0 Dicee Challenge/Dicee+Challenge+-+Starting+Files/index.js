@@ -10,9 +10,6 @@ var stringArray = ["dice1.png", "dice2.png", "dice3.png", "dice4.png", "dice5.pn
         document.querySelector(".img2").src = "images/" + stringArray[y];
       }
 
-      
-     
-
       function calculateWinner(x, y){
         if(x > y){
           document.querySelector("h1").innerHTML = "🚩Player 1 Wins!";
@@ -23,11 +20,9 @@ var stringArray = ["dice1.png", "dice2.png", "dice3.png", "dice4.png", "dice5.pn
         }
       }
 
-      
       function displayResults(){
         var player_1_value = randomNumber();
         var player_2_value = randomNumber();
         setDie(player_1_value, player_2_value);
         calculateWinner(player_1_value, player_2_value);
-        
       }
