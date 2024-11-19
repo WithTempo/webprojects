@@ -1,56 +1,45 @@
-/*button_array = [".w", ".a", ".s", ".d", ".j", ".k", ".l"];
-
-function handleClick() {
-    alert("I got clicked!");
+class Drum {
+    constructor(sound, image) {
+        this.sound = "sounds/" + sound + ".mp3";
+        this.image = "images/" + image + ".png";
+        this.audio = new Audio(this.sound);
+        this.play = function () {
+            this.audio.play();
+        };
+    }
+}
+var numOfDrums = document.querySelectorAll(".drum").length;
+for(var x = 0; x < numOfDrums; x++){
+    var letCont = document.querySelectorAll(".drum")[x];
+    var letter = letCont.textContent;
+    switch(letter){
+        case "w":
+            var w = new Drum("crash", "crash");
+            break;
+        case "a":
+            var a = new Drum("kick-bass", "kick");
+            break;
+        case "s":
+            var s = new Drum("snare", "snare");
+            break;
+        case "d":
+            var d = new Drum("tom-1", "tom1");
+            break;
+        case "j":
+            var j = new Drum("tom-2", "tom2");
+            break;
+        case "k":
+            var k = new Drum("tom-3", "tom3");
+            break;
+        case "l":
+            var l = new Drum("tom-4", "tom4");
+            break;
+    }
+    
 }
 
-button_array.forEach(x => {
-    document.querySelector(x).addEventListener("click", handleClick)
-});
-
-*/
-
-var numberOfDrumButtons = document.querySelectorAll(".drum").length; // = int 7
-
-for (var i=0; i<numberOfDrumButtons; i++){ // i = 0-6
-    document.querySelectorAll(".drum")[i].addEventListener("click", function() {
-        
-        var buttonInnerHTML = this.innerHTML;
-
-        switch (buttonInnerHTML) {
-            case 'w':
-                var audio = new Audio("sounds/crash.mp3");
-                audio.play();
-            break;
-            case 'a':
-                var audio = new Audio("sounds/kick-bass.mp3");
-                audio.play();
-            break;
-            case 's':
-                var audio = new Audio("sounds/snare.mp3");
-                audio.play();
-            break;
-            case 'd':
-                var audio = new Audio("sounds/tom-1.mp3");
-                audio.play();
-            break;
-            case 'j':
-                var audio = new Audio("sounds/tom-2.mp3");
-                audio.play();
-            break;
-            case 'k':
-                var audio = new Audio("sounds/tom-3.mp3");
-                audio.play();
-            break;
-            case 'l':
-                var audio = new Audio("sounds/tom-4.mp3");
-                audio.play();
-            break;
-        }
-    })
-}
-
-function play_audio(key){
-    var audio = new Audio("sounds/$key.mp3");
-        audio.play();
-}
+document.addEventListener("keydown", function(event){
+    //global window object references variables by their strings
+    //don't do this anymore, use objects or maps to avoid conflicts and maintain readability and scalability
+    window[event.key].play();
+})
